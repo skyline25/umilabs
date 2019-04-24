@@ -16,7 +16,7 @@ const config = {
         test: /\.js$/,
         use: 'babel-loader',
         exclude: /node_modules/
-      }
+      },
     ]
   },
   devServer: {

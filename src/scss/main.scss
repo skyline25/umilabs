@@ -1,18 +1,12 @@
-
-// COLORS
-$color-white      : #fff;
-$color-black      : #000;
-$color-red        : #f00;
-
-// FONTS
-$smallSize        : .75rem;
-$normalSize       : 1rem;
-$largeSize        : 1.25rem;
-$extraLargeSize   : 2rem;
+@import '../../node_modules/normalize.css/normalize.css';
+@import './_variables.scss';
+@import './_fonts.scss';
 
 // Temporary clases
 body {
   font-size: 16px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  
 }
 #test {
   display: flex;

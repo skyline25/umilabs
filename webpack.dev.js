@@ -36,7 +36,24 @@ module.exports = merge(common, {
             loader: 'sass-loader'
           }
         ]
-      }
+      },
+      // {
+      //   test: /\.(woff|woff2)$/,
+      //   use: {
+      //     loader: 'url-loader?limit=100000',
+      //   },
+      // },
+      {
+        test: /\.(woff|woff2)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+          //   name: './resources/fonts/[name].[ext]',
+          //   mimetype: 'application/font-woff',
+            publicPath: '.src/resources/fonts'
+          },
+        },
+      },
     ]
   }
 })
