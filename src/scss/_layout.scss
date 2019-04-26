@@ -1,0 +1,34 @@
+.container {
+  width: 100%;
+  max-width: $container-width-normal;
+  margin: 0 auto;
+
+  &_width {
+    &_wide {
+      max-width: $container-width-wide;
+    }
+  }
+
+  &_grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+
+  &_justify {
+    &_center {
+      justify-content: center;
+    }
+  }
+
+  &_direction {
+    &_column {
+      flex-direction: column;
+    }
+  }
+
+  &_wrap {
+    flex-wrap: wrap;
+  }
+}

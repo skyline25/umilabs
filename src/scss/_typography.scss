@@ -1,0 +1,48 @@
+.header {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  color: $color-mine-shaft;
+  font-family: "DIN Pro";
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: -0.96px;
+  line-height: 1;
+  
+  &_color {
+    &_black {
+      color: $color-black;
+    }
+    &_white {
+      color: $color-white;
+    }
+  }
+
+  &_type {
+    &_thin {
+      font-size: 40px;
+      letter-spacing: -0.8px;
+    }
+  }
+}
+
+.text {
+  color: $color-mine-shaft;
+  font-family: Roboto;
+  font-size: $font-size-normal;
+  font-weight: 400;
+
+  &_color {
+    &_gun-powder {
+      color: $color-gun-powder;
+    }
+  }
+
+  &_type {
+    &_accent {
+      color: $color-tango;
+      font-family: "Roboto";
+      font-size: $font-size-normal;
+      font-weight: 700;
+    }
+  }
+}

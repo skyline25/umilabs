@@ -1,7 +1,25 @@
 extends pug/base
 
 block content
-  main
-    h1#test
-    h2 test also 2334
-    h3 and some text put here
+  section.intro
+    .container.container_grid.container_justify_center.container_direction_column
+      h1.header Ты готов стать профессионалом?
+
+      p.text.text_color_gun-powder
+        | Мы ищем 
+        span.text.text_type_accent талантов 
+        | и 
+        span.text.text_type_accent саппортов 
+        | в команду. Решите на какую категорию вы претендуете. 
+      
+      button.button.button_type_fill Заполнить анкету
+
+  section.skills
+    .container.container_grid.container_wrap
+      .skill
+        h3.title
+          | Прокачиваем мир
+        p.text
+          | Вы хотите сделать мир лучше и не готовы ждать всю жизнь, чтобы начать это делать?
+      
+      //- TODO Сделать миксин skills для 4х скилов

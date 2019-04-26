@@ -48,9 +48,19 @@ module.exports = merge(common, {
         use: {
           loader: 'file-loader',
           options: {
-          //   name: './resources/fonts/[name].[ext]',
-          //   mimetype: 'application/font-woff',
-            publicPath: '.src/resources/fonts'
+            name: './fonts/[name].[ext]',
+            // outputPath: 'resources/'
+            // mimetype: 'application/font-woff',
+            // publicPath: './resources/fonts'
+          },
+        },
+      },
+      {
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: './images/[hash].[ext]'
           },
         },
       },
