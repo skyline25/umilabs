@@ -1,0 +1,18 @@
+mixin form-line(items)
+  each item in items
+    label.form-line
+      span.form-line__order=item.order
+      span.form-line__label=item.label
+
+      if item.type==='textarea'
+        textarea(
+          placeholder=item.placeholder
+          value=item.value
+        ).form-line__input.form-line__input_textarea
+
+      else 
+        input(
+          type=item.type
+          placeholder=item.placeholder
+          value=item.value
+        ).form-line__input

@@ -1,0 +1,13 @@
+mixin advantage(items)
+  each item in items
+    .advantage
+      img(
+        src=item.imageSrc 
+        alt=item.title
+      ).advantage__image
+      
+      h3.advantage__title=item.title
+
+      .advantage__divider
+      
+      p.advantage__text=item.text
