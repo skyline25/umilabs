@@ -8,13 +8,22 @@ module.exports = merge(common, {
   mode: 'production',
   plugins: [
     new ExtractTextPlugin('styles.min.css'),
-    new HtmlWebpackPlugin()
+    new HtmlWebpackPlugin({
+      template: './src/index.pug'
+    })
   ],
   module: {
     rules: [
       { 
         test: /\.pug$/,
-        use: ['pug-loader']
+        use: [
+          {
+            loader: 'pug-loader',
+            options: {
+              pretty: true
+            }
+          }
+        ]
       },
       {
         test: /\.css$/,
@@ -56,6 +65,15 @@ module.exports = merge(common, {
           loader: 'file-loader',
           options: {
             name: 'fonts/[name].[ext]',
+          },
+        },
+      },
+      {
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: './images/[hash].[ext]'
           },
         },
       },
