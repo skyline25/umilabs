@@ -39,5 +39,9 @@
     "webpack-dev-server": "^3.3.1",
     "webpack-merge": "^4.2.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "inputmask": "^4.0.8",
+    "scroll-to-element": "^2.0.3",
+    "validator": "^10.11.0"
+  }
 }

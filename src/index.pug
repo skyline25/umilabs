@@ -16,7 +16,7 @@ block content
         span.text.text_type_accent саппортов 
         | в команду. Решите на какую категорию вы претендуете. 
       
-      button.button.button_type_fill Заполнить анкету
+      button#goToForm.button.button_type_fill Заполнить анкету
 
   section.skills
     .container.container_grid.container_wrap
@@ -24,7 +24,7 @@ block content
         [
           {
             title: 'Прокачиваем мир',
-            text: 'Вы хотите сделать мир лучше и не готовы ждать всю жизнь, чтобы начать это делать?'
+            text: `Вы хотите сделать мир лучше и не готовы ждать всю жизнь, чтобы начать это делать?`
           },
           {
             title: 'Мотивируем себя',
@@ -67,25 +67,24 @@ block content
     
   section.advantages
     .container.container_width_wide
-      h2.header Приемущества работы с нами
-      //- TODO Добавить отображение картинок 
+      h2.header.header_type_thin Приемущества работы с нами
       .container_grid
         +advantage(
           [
             {
-              imageSrc: 'resources/img/pocket-1.png',
+              imageSrc: require('./resources/img/pocket.png'),
               title: 'Делимся оптом и навыками',
               text: 'Мы обучаем коллег всему, что знаем сами. Наш опыт уникален и проверен временем, '+
               'а команда постоянно совершенствует свои знания и навыки.'
             },
             {
-              imageSrc: '',
+              imageSrc: require('./resources/img/pocket.png'),
               title: 'Стабильная зарплата',
               text: 'Вы без задержек получаете официальную зарплату. Также мы оплачиваем больничные '+
               'и даем возможность брать оплачиваемый отпуск до 4 недель в год.'
             },
             {
-              imageSrc: '',
+              imageSrc: require('./resources/img/pocket.png'),
               title: 'Гибкий график',
               text: 'Мы умеем работать с теми, кто еще не закончил получать образование. '+
               'Вы можете работать неполный рабочий день, брать отгулы на время сессии и диплома.'
@@ -93,41 +92,49 @@ block content
           ]
         )
 
-  section.feedback
+  section#formAnchor.feedback
     .container.container_width_thin
-      h2.header Теперь расскажите о себе
+      h2.header.header_type_thin Теперь расскажите о себе
 
-      form
+      form#form
         +form-line(
           [
             {
               order: '1',
+              id: 'name',
               type: 'text',
+              name: 'name',
               label: 'Фамилия и имя',
               placeholder: 'Сидоров Александр',
-              value: ''
+              value: 'Безбатченко Олег'
             },
             {
               order: '2',
-              type: 'email',
+              id: 'email',
+              type: 'text',
+              name: 'email',
               label: 'Электронная почта',
               placeholder: 'Sidorov@yandex.ru',
-              value: ''
+              value: 'bezbatchenko84@gmail.ru'
             },
             {
               order: '3',
-              type: 'phone',
+              id: 'phone',
+              type: 'tel',
+              name: 'phone',
               label: 'Телефон',
               placeholder: '+7 (999)-328-14-20',
-              value: ''
+              value: '0713584809'
             },
             {
               order: '4',
+              id: 'text',
               type: 'textarea',
+              name: 'text',
               label: 'Какой деятельностью, не связанной с текущими проектами, '+
               'вы бы хотели заниматься в рабочее время?',
               placeholder: 'Свой проект по созданию универсальной инфраструктуры строительства',
-              value: ''
+              value: 'Создать на React SPA для организации спортивных тренировок'
             },
           ]
         )

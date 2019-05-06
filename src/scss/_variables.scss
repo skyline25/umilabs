@@ -13,26 +13,19 @@ $color-tango              : #f47821;
 $color-cod-gray           : #161616;
 $color-gun-powder         : #4a4556;
 $color-whisper            : #f7f5fa;
-
-// FONTS
-$font-size-extra-small    : 12px;
-$font-size-small          : 14px;
-$font-size-normal         : 16px;
-$font-size-large          : 20px;
-$font-size-extra-large    : 24px;
-$font-size-extra-large-2  : 40px;
-$font-size-extra-large-3  : 48px;
+$color-alabaster          : #f9f9f9;
 
 // LAYOUT
 $container-width-thin     : 772px;
 $container-width-normal   : 972px;
-$container-width-wide     : 1240px;
-
-// GUTTERS
-$gutter-vertical          : 24px;
-$gutter-horizontal        : 24px;
+$container-width-wide     : 1190px;
 
 // ANIMATION
 $transition-fast          : all .17s ease;
 $transition-normal        : all .33s ease;
 $transition-slow          : all .5s ease;
+
+// BREAKPOINTS
+$mobile                   : $container-width-thin;
+$tablet                   : $container-width-normal;
+$desktop                  : $container-width-wide;

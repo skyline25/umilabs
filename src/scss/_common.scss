@@ -6,13 +6,46 @@ body {
 }
 
 .intro {
+  padding-right: 30px;
+  padding-left: 30px;
   .container {
     min-height: 480px;
   }
 
-  .button {
-    margin-top: 32px;
+  .header {
+    margin-top: 44px;
+    margin-bottom: 26px;
+    text-align: center;
   }
+
+  .text {
+    margin-top: 0;
+    margin-bottom: 38px;
+    text-align: center;
+  }
+
+  .button {
+    margin-bottom: 0;
+    margin-left: 36px;
+  }
+
+  @media all and (max-width: $desktop){ 
+		
+  }
+  
+  @media all and (max-width: $tablet){ 
+		
+  }
+
+  @media all and (max-width: $mobile){ 
+    padding-right: 15px;
+    padding-left: 15px;
+
+    .text {
+      line-height: 1.25;
+    }
+  }
+
 }
 
 .skills {
@@ -24,24 +57,23 @@ body {
   background-position: top center;
   background-color: $color-whisper;
 
-  .container {
-    background: $color-white;
-  }
-
   .skill {
     width: 50%;
-    padding: 50px 60px;
+    padding: 50px 75px 50px 60px;
     box-sizing: border-box;
     border: 1px solid $color-gallery;
+    background: $color-white;
+    transition: $transition-normal;
 
     &__title {
       margin-top: 0;
+      margin-bottom: 17px;
       color: $color-tango;
       font-family: "DIN Pro";
       font-size: 12px;
       font-weight: 700;
       letter-spacing: 0.48px;
-      line-height: 17px;
+      line-height: 14px;
       text-transform: uppercase;
     }
 
@@ -53,14 +85,39 @@ body {
       font-size: 24px;
       font-weight: 400;
       letter-spacing: -0.72px;
-      line-height: 28px;
+      line-height: 29px;
+    }
+
+    &:hover {
+      transform: scale(1.01);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  @media all and (max-width: $tablet){ 
+    padding: 60px 30px 45px 30px;
+    background-image: none;
+
+		.skill {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 50px 60px;
+    }
+  }
+
+  @media all and (max-width: $mobile){ 
+    padding-right: 15px;
+    padding-left: 15px;
+
+    .skill {
+      padding: 40px 30px;
     }
   }
 }
 
 .similar {
   .container {
-    padding: 80px 100px 100px 100px;
+    padding: 82px 100px 106px 100px;
   }
 
   .header {
@@ -72,6 +129,7 @@ body {
   }
 
   .text {
+    margin-bottom: 28px;
     color: $color-scarpa-flow;
     line-height: 26px;
     
@@ -79,35 +137,49 @@ body {
       margin-bottom: 0;
     }
   }
+
+  @media all and (max-width: $tablet){ 
+    .container {
+      padding: 60px 90px 60px 90px;
+    }
+  }
+
+  @media all and (max-width: $mobile){
+    .container {
+      padding: 60px 45px;
+    }
+  }
 }
 
 .advantages {
   padding-top: 120px;
-  padding-bottom: 125px;
+  padding-bottom: 129px;
   background-color: $color-whisper;
 
   .header {
     margin-top: 0;
-    margin-bottom: 60px;
+    margin-bottom: 62px;
     color: $color-black;
-    font-size: 40px;
-    letter-spacing: -0.8px;
-    line-height: 47px;
     text-align: center;
   }
 
+
   .advantage {
+    position: relative;
+    top: 0;
     width: calc(100% / 3);
-    padding: 0 35px 35px 35px;
+    padding: 0 60px 35px 10px;
     box-sizing: border-box;
+    transition: $transition-normal;
 
     &__image {
       width: 52px;
       height: 52px;
-      margin-bottom: 30px;
+      margin-bottom: 26px;
     }
 
     &__title {
+      margin-top: 0;
       margin-bottom: 24px;
       color: $color-black;
       font-family: "DIN Pro";
@@ -128,6 +200,55 @@ body {
       color: $color-scarpa-flow;
       line-height: 26px;
     }
+
+    &:hover {
+      top: -5px;
+    }
+
+  }
+
+  @media all and (max-width: $desktop){ 
+    .container {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+
+    .advantage {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  }
+
+  @media all and (max-width: $tablet){ 
+    padding-top: 60px;
+    padding-bottom: 60px;
+    
+    .header {
+      margin-bottom: 45px;
+    }
+
+    .container_grid {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .advantage {
+      width: 100%;
+      padding-right: 75px;
+      padding-left: 75px; 
+      padding-bottom: 45px;
+      
+      &:last-child {
+        padding-bottom: 0;
+      } 
+    }
+  }
+
+  @media all and (max-width: $mobile){
+    .advantage {
+      padding-right: 30px;
+      padding-left: 30px;  
+    }
   }
 }
 
@@ -138,28 +259,36 @@ body {
 
   .header {
     margin-top: 0;
-    margin-bottom: 82px;
+    margin-bottom: 83px;
     color: $color-white;
-    font-size: 40px;
-    letter-spacing: -0.8px;
-    line-height: 49px;
     text-align: center;
   }
 
   .container {
     padding: 0 100px;
   }
+
+  @media all and (max-width: $tablet){ 
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media all and (max-width: $mobile){
+    .container {
+      padding: 0 30px;
+    }
+  }
 }
 
 .form-line {
   position: relative;
   display: block;
-  margin-bottom: 70px;
+  margin-bottom: 35px;
 
   &__order {
     position: absolute;
-    top: -22px;
-    left: -92px;
+    top: -20px;
+    left: -93px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -171,23 +300,25 @@ body {
     font-size: 20px;
     font-weight: 500;
     line-height: 23px;
+    box-sizing: border-box;
   }
 
+  &__message,
   &__label {
     display: flex;
     align-items: center;
-    margin-bottom: 12px;
+    margin-bottom: 6px;
     color: $color-white;
     font-family: "DIN Pro";
     font-size: 16px;
     font-weight: 700;
     letter-spacing: -0.16px;
-    line-height: 23px;
+    line-height: 25px;
   }
 
   &__input {
     width: 100%;
-    padding: 12px 0;
+    padding: 16px 0;
     border: none;
     border-bottom: 2px solid rgba($color-athens-gray,0.1);
     background: none;
@@ -198,6 +329,34 @@ body {
   
     &_textarea {
       resize: none;
+    }
+  }
+  
+  &__message {
+    min-height: 25px;
+    margin-top: 8px;
+    margin-bottom: 0;
+    color: $color-tango;
+    text-transform: uppercase;
+  }
+
+  &:last-of-type {
+    margin-bottom: 23px;
+  }
+
+  @media all and (max-width: $tablet){ 
+    &__order {
+      left: 0;
+    }
+
+    &__label {
+      margin-bottom: 30px;
+      padding-left: 90px;
+    }
+
+    &__input {
+      font-size: 16px;
+      line-height: 1.5;
     }
   }
 }

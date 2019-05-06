@@ -6,13 +6,18 @@ mixin form-line(items)
 
       if item.type==='textarea'
         textarea(
+          id=item.id
+          name=item.name
           placeholder=item.placeholder
-          value=item.value
-        ).form-line__input.form-line__input_textarea
+        ).form-line__input.form-line__input_textarea=item.value 
 
       else 
         input(
+          id=item.id
+          name=item.name
           type=item.type
           placeholder=item.placeholder
           value=item.value
         ).form-line__input
+
+      span.form-line__message
