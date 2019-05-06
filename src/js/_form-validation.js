@@ -76,7 +76,7 @@ form.addEventListener('submit',(e)=>{
         break
       
       case 'phone':
-        if (!validator.isLength(phone.value, {min:10})) {
+        if (!validator.isLength(phone.inputmask.unmaskedvalue(), {min:10})) {
            printMessage(field, 'Введите телефон в формате +7 (999)-999-99-99')
 
            isExeptionInForm = true
