@@ -6,20 +6,20 @@ include pug/mixins/form-line
 
 block content
   section.intro
-    .container.container_grid.container_justify_center.container_direction_column.container_align_center
-      h1.header Ты готов стать профессионалом?
+    .container.intro__container
+      h1.header.intro__header Ты готов стать профессионалом?
 
-      p.text.text_color_gun-powder
+      p.text.intro__text
         | Мы ищем 
         span.text.text_type_accent талантов 
         | и 
         span.text.text_type_accent саппортов 
         | в команду. Решите на какую категорию вы претендуете. 
       
-      button#goToForm.button.button_type_fill Заполнить анкету
+      button#goToForm.button.button_type_fill.intro__button Заполнить анкету
 
   section.skills
-    .container.container_grid.container_wrap
+    .container.skills__container
       +skill(
         [
           {
@@ -42,17 +42,17 @@ block content
       )
 
   section.similar
-    .container
-      h2.header Мы похожи!
+    .container.similar__container
+      h2.header.similar__header Мы похожи!
 
-      p.text
+      p.text.similar__text
         | Не следует, однако забывать, что укрепление и развитие структуры представляет собой интересный 
         | эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач. Разнообразный 
         | и богатый опыт рамки и место обучения кадров влечет за собой процесс внедрения и модернизации 
         | системы обучения кадров, соответствует насущным потребностям. Повседневная практика показывает,
         | что укрепление и развитие структуры способствует подготовки и реализации форм развития.
       
-      p.text
+      p.text.similar__text
 
         | Разнообразный и богатый опыт начало повседневной работы по формированию позиции способствует
         | подготовки и реализации дальнейших направлений развития. Равным образом дальнейшее развитие
@@ -66,9 +66,9 @@ block content
         | и модернизации соответствующий условий активизации.
     
   section.advantages
-    .container.container_width_wide
-      h2.header.header_type_thin Приемущества работы с нами
-      .container_grid
+    .container.advantages__container
+      h2.header.advantages__header.header_type_thin Приемущества работы с нами
+      .advantages__grid
         +advantage(
           [
             {
@@ -93,8 +93,8 @@ block content
         )
 
   section#formAnchor.feedback
-    .container.container_width_thin
-      h2.header.header_type_thin Теперь расскажите о себе
+    .container.feedback__container
+      h2.header.feedback__header.header_type_thin Теперь расскажите о себе
 
       form#form
         +form-line(

@@ -38,23 +38,25 @@ form.addEventListener('submit',(e)=>{
 
     switch (field.id) {
       case 'name':
-        if (!validator.isAlpha(name.value, 'ru-RU') && !validator.isLength(name.value, {min:3, max:undefined})) {
-          printMessage(field, 'Введите имя на русском, длинной более 3 символов')
+        let nameValue = name.value.replace(/\s/g, '')
+
+        if (!validator.isAlpha(name.value, 'ru-RU') && !validator.isLength(nameValue, {min:3, max:undefined})) {
+          printMessage(field, 'Введите имя на русском языке, длинной более 3 символов')
           
           isExeptionInForm = true
 
           return false
         }
       
-        if (!validator.isAlpha(name.value, 'ru-RU')) {
-          printMessage(field, 'Введите имя на русском')
+        if (!validator.isAlpha(nameValue, 'ru-RU')) {
+          printMessage(field, 'Введите имя на русском языке')
 
           isExeptionInForm = true
 
           return false
         }
 
-        if (!validator.isLength(name.value, {min:3, max:undefined})) {
+        if (!validator.isLength(nameValue, {min:3, max:undefined})) {
           printMessage(field, 'Имя должно быть длинной более 3 символов')
 
           isExeptionInForm = true
@@ -83,8 +85,8 @@ form.addEventListener('submit',(e)=>{
         break
 
       case 'text':
-        if (!validator.isAlphanumeric(text.value)) {
-          printMessage(field, 'Введите в поле текст на русском или английском языке')
+        if (!validator.isLength(text.value, {min:10})) {
+          printMessage(field, 'Введите в поле текст не короче 10 символов')
 
           isExeptionInForm = true
         }

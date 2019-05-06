@@ -8,40 +8,38 @@ body {
 .intro {
   padding-right: 30px;
   padding-left: 30px;
-  .container {
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     min-height: 480px;
   }
 
-  .header {
+  &__header {
     margin-top: 44px;
     margin-bottom: 26px;
     text-align: center;
   }
 
-  .text {
+  &__text {
     margin-top: 0;
     margin-bottom: 38px;
     text-align: center;
+    color: $color-gun-powder;
   }
 
-  .button {
+  &__button {
     margin-bottom: 0;
     margin-left: 36px;
-  }
-
-  @media all and (max-width: $desktop){ 
-		
-  }
-  
-  @media all and (max-width: $tablet){ 
-		
   }
 
   @media all and (max-width: $mobile){ 
     padding-right: 15px;
     padding-left: 15px;
 
-    .text {
+    &__text {
       line-height: 1.25;
     }
   }
@@ -56,6 +54,13 @@ body {
   background-size: contain;
   background-position: top center;
   background-color: $color-whisper;
+
+  &__container {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 
   .skill {
     width: 50%;
@@ -116,11 +121,11 @@ body {
 }
 
 .similar {
-  .container {
+  &__container {
     padding: 82px 100px 106px 100px;
   }
 
-  .header {
+  &__header {
     margin-top: 0;
     color: $color-mine-shaft;
     font-family: "DIN Pro";
@@ -128,7 +133,7 @@ body {
     line-height: 56px;
   }
 
-  .text {
+  &__text {
     margin-bottom: 28px;
     color: $color-scarpa-flow;
     line-height: 26px;
@@ -139,13 +144,13 @@ body {
   }
 
   @media all and (max-width: $tablet){ 
-    .container {
+    &__container {
       padding: 60px 90px 60px 90px;
     }
   }
 
   @media all and (max-width: $mobile){
-    .container {
+    &__container {
       padding: 60px 45px;
     }
   }
@@ -156,13 +161,22 @@ body {
   padding-bottom: 129px;
   background-color: $color-whisper;
 
-  .header {
+  &__container {
+    max-width: $container-width-wide;
+  }
+
+  &__header {
     margin-top: 0;
     margin-bottom: 62px;
     color: $color-black;
     text-align: center;
   }
 
+  &__grid {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+  }
 
   .advantage {
     position: relative;
@@ -208,7 +222,7 @@ body {
   }
 
   @media all and (max-width: $desktop){ 
-    .container {
+    &__container {
       padding-right: 15px;
       padding-left: 15px;
     }
@@ -223,11 +237,11 @@ body {
     padding-top: 60px;
     padding-bottom: 60px;
     
-    .header {
+    &__header {
       margin-bottom: 45px;
     }
 
-    .container_grid {
+    &__grid {
       flex-direction: column;
       align-items: center;
     }
@@ -256,16 +270,17 @@ body {
   padding-top: 100px;
   padding-bottom: 120px;
   background-color: $color-cod-gray;
+  
+  &__container {
+    max-width: $container-width-thin;
+    padding: 0 100px;
+  }
 
-  .header {
+  &__header {
     margin-top: 0;
     margin-bottom: 83px;
     color: $color-white;
     text-align: center;
-  }
-
-  .container {
-    padding: 0 100px;
   }
 
   @media all and (max-width: $tablet){ 
@@ -274,7 +289,7 @@ body {
   }
 
   @media all and (max-width: $mobile){
-    .container {
+    &__container {
       padding: 0 30px;
     }
   }

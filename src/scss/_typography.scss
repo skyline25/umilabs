@@ -7,15 +7,6 @@
   font-weight: 400;
   letter-spacing: -0.96px;
   line-height: 1;
-  
-  &_color {
-    &_black {
-      color: $color-black;
-    }
-    &_white {
-      color: $color-white;
-    }
-  }
 
   &_type {
     &_thin {
@@ -31,12 +22,6 @@
   font-family: Roboto;
   font-size: 16px;
   font-weight: 400;
-
-  &_color {
-    &_gun-powder {
-      color: $color-gun-powder;
-    }
-  }
 
   &_type {
     &_accent {
